@@ -57,4 +57,4 @@ var search = exports.search = function(query, cb){
 } // end search
 
 
-search('time in sydney', showResult)
+// search('time in sydney', showResult)
