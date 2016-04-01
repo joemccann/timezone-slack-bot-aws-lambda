@@ -81,3 +81,7 @@ https://nodesource.slack.com/apps/
 ![img](https://cldup.com/iyZtyGrRAh.thumb.png)
 
 Follow the process for adding the new Slash command including the URL from your API gateway.
+
+# LICENSE
+
+MIT (see LICENSE file)
