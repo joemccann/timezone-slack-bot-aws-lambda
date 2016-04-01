@@ -1,3 +1,7 @@
+# DISCLAIMER
+
+DO NOT USE IN PRODUCTION. THIS IS FOR LEARNING ONLY, OKAY?
+
 # Timezone Bot
 
 In Slack, I want to know the timezone of a city right now.
@@ -15,7 +19,7 @@ or more generically
 ## Clone the repo
 
 ```sh
-git clone
+git clone https://github.com/joemccann/timezone-slack-bot-aws-lambda.git && cd timezone-slack-bot-aws-lambda
 npm i
 ```
 
