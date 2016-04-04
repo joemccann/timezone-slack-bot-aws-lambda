@@ -1,17 +1,27 @@
 {
-  "name": "timezone-bot",
+  "name": "@joemccann/timezone-bot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A package intended for bots on AWS lambda to fetch the current time of any city.",
+  "main": "timezone-lambda.js",
+  "repository": "https://github.com/joemccann/timezone-slack-bot-aws-lambda.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/**-test.js | tap-spec",
+    "create": "./scripts/create.js",
+    "list": "./scripts/list.js",
+    "deploy": "./scripts/deploy.js",
+    "invoke": "./scripts/invoke.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Joe McCann",
+  "license": "MIT",
   "dependencies": {
     "botbuilder": "^0.6.0",
     "cheerio": "^0.20.0",
+    "lodash": "^4.7.0",
     "request": "^2.69.0",
     "restify": "^4.0.4"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
   }
 }
