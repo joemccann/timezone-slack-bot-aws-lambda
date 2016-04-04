@@ -1,15 +1,15 @@
 var test = require('tape')
-var tzSearch = require('../src/timezone-search')
-var lodash = require('lodash')
-var isFunction = lodash.isFunction
-var isArray = lodash.isArray
+	, tzSearch = require('../src/timezone-search').search
+	, lodash = require('lodash')
+	, isFunction = lodash.isFunction
+	;
 
 test('sanity', t=> {
   t.plan(1)
   t.ok(tzSearch, 'tzSearch exists')
 })
 
-test('cannot give tzSearch bad params', t=> {
+test('cannot give search() bad/empty params', t=> {
   t.plan(1)
   try {
     tzSearch()
@@ -20,7 +20,7 @@ test('cannot give tzSearch bad params', t=> {
   }
 })
 
-test('can\'t call tzSearch without query', t=> {
+test('can\'t call search() without query', t=> {
 
   t.plan(1)
   try {
@@ -33,18 +33,18 @@ test('can\'t call tzSearch without query', t=> {
 
 })
 
-/*
-
-
+test('can\'t call search() without callback function', t=> {
 
   t.plan(1)
-  function tester(event, callback) {
-    callback(null, event)
+  try {
+    tzSearch("london", null)
   }
-  var fn = tzSearch(tester)
-  t.ok(isFunction(fn), 'got a function back')
+  catch(e) {
+    t.ok(e, 'failed with bad params and we got a meaningful error')
+    console.log(e)
+  }
 
-*/
+})
 
 
 /*
